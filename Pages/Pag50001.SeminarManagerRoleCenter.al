@@ -43,7 +43,7 @@ page 50001 "Seminar Manager Role Center"
                     ApplicationArea = All;
                 }
             }
-group(Tasks)
+            group(Tasks)
             {
                 Caption = 'Zadania';
                 action(ExportParticipants)
@@ -56,7 +56,6 @@ group(Tasks)
         }
     }
 }
-
 profile "Seminar Manager"
 {
     Caption = 'Seminar Manager';
