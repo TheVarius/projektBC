@@ -43,6 +43,16 @@ page 50001 "Seminar Manager Role Center"
                     ApplicationArea = All;
                 }
             }
+group(Tasks)
+            {
+                Caption = 'Zadania';
+                action(ExportParticipants)
+                {
+                    Caption = 'Eksport uczestników szkolenia';
+                    RunObject = xmlport "Export Seminar Participants";
+                    ApplicationArea = All;
+                }
+            }
         }
     }
 }
