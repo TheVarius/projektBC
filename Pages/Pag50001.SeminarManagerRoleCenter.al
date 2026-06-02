@@ -45,11 +45,11 @@ page 50001 "Seminar Manager Role Center"
             }
             group(Tasks)
             {
-                Caption = 'Zadania';
+                Caption = 'Tasks';
                 action(ExportParticipants)
                 {
                     Caption = 'Eksport uczestników szkolenia';
-                    RunObject = xmlport "Export Seminar Participants";
+                    RunObject = page "Seminar Registration List";
                     ApplicationArea = All;
                 }
             }
