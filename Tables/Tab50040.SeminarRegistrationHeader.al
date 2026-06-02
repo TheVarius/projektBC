@@ -15,9 +15,7 @@ table 50040 "Seminar Registration Header"
 
             trigger OnValidate()
             begin
-                if (xRec."Starting Date" <> 0D) and
-                   (Status <> Status::Planning)
-                then
+                if Status <> Status::Planning then
                     Error(StartingDateStatusErr);
             end;
         }

@@ -30,29 +30,27 @@ table 50050 "Seminar Registration Line"
         field(4; "Participant Contact No."; Code[20])
         {
             Caption = 'Participant Contact No.';
+            TableRelation = Contact;
 
             trigger OnLookup()
             var
                 Contact: Record Contact;
                 ContactBusinessRelation: Record "Contact Business Relation";
             begin
-                Contact.Reset();
+                if "Bill-to Customer No." = '' then
+                    exit;
 
                 ContactBusinessRelation.Reset();
                 ContactBusinessRelation.SetRange("Link to Table",
                     ContactBusinessRelation."Link to Table"::Customer);
-
                 ContactBusinessRelation.SetRange("No.", "Bill-to Customer No.");
 
-                if ContactBusinessRelation.FindSet() then begin
-                    repeat
-                        Contact.SetRange("Company No.",
-                            ContactBusinessRelation."Contact No.");
-                    until ContactBusinessRelation.Next() = 0;
+                if ContactBusinessRelation.FindFirst() then begin
+                    Contact.Reset();
+                    Contact.SetRange("Company No.", ContactBusinessRelation."Contact No.");
+                    if Page.RunModal(Page::"Contact List", Contact) = Action::LookupOK then
+                        Validate("Participant Contact No.", Contact."No.");
                 end;
-
-                if Page.RunModal(Page::"Contact List", Contact) = Action::LookupOK then
-                    Validate("Participant Contact No.", Contact."No.");
             end;
         }
 
