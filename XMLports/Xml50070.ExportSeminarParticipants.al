@@ -1,6 +1,6 @@
-xmlport 50100 "Export Seminar Participants"
+xmlport 50070 "Export Seminar Participants"
 {
-    Caption = 'Eksport uczestników szkolenia';
+    Caption = 'Export Seminar Participants';
     Direction = Export;
     Format = Xml;
     UseRequestPage = true;
@@ -12,41 +12,35 @@ xmlport 50100 "Export Seminar Participants"
             tableelement(SeminarRegHeader; "Seminar Registration Header")
             {
                 XmlName = 'Seminar';
+                CalcFields = "Instructor Name";
                 RequestFilterFields = "No.", "Seminar Code";
 
                 fieldelement(Registration_No; SeminarRegHeader."No.")
                 {
-
                 }
 
                 fieldelement(Seminar_Code; SeminarRegHeader."Seminar Code")
                 {
-
                 }
 
                 fieldelement(Seminar_Name; SeminarRegHeader."Seminar Name")
                 {
-
                 }
 
                 fieldelement(Starting_Date; SeminarRegHeader."Starting Date")
                 {
-
                 }
 
                 fieldelement(Seminar_Duration; SeminarRegHeader."Seminar Duration")
                 {
-
                 }
 
                 fieldelement(Instructor_Name; SeminarRegHeader."Instructor Name")
                 {
-
                 }
 
                 fieldelement(Room_Name; SeminarRegHeader."Seminar Room Name")
                 {
-
                 }
 
                 tableelement(SeminarRegLine; "Seminar Registration Line")
@@ -55,25 +49,22 @@ xmlport 50100 "Export Seminar Participants"
                     LinkTable = SeminarRegHeader;
                     LinkFields = "Seminar Registration No." = field("No.");
                     MinOccurs = Zero;
+                    CalcFields = "Participant Name";
 
                     fieldelement(Customer_No; SeminarRegLine."Bill-to Customer No.")
                     {
-
                     }
 
                     textelement(Customer_Name)
                     {
-
                     }
 
                     fieldelement(Contact_No; SeminarRegLine."Participant Contact No.")
                     {
-
                     }
 
                     fieldelement(Participant_Name; SeminarRegLine."Participant Name")
                     {
-
                     }
 
                     trigger OnAfterGetRecord()
@@ -86,6 +77,23 @@ xmlport 50100 "Export Seminar Participants"
                             Customer_Name := '';
                     end;
                 }
+            }
+        }
+    }
+
+    requestpage
+    {
+        layout
+        {
+            area(content)
+            {
+            }
+        }
+
+        actions
+        {
+            area(processing)
+            {
             }
         }
     }
