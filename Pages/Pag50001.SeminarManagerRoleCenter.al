@@ -49,7 +49,7 @@ page 50001 "Seminar Manager Role Center"
                 action(ExportParticipants)
                 {
                     Caption = 'Eksport uczestników szkolenia';
-                    RunObject = page "Seminar Registration List";
+                    RunObject = xmlport "Export Seminar Participants";
                     ApplicationArea = All;
                 }
             }

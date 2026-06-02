@@ -32,6 +32,11 @@ table 50050 "Seminar Registration Line"
             Caption = 'Participant Contact No.';
             TableRelation = Contact;
 
+            trigger OnValidate()
+            begin
+                CalcFields("Participant Name");
+            end;
+
             trigger OnLookup()
             var
                 Contact: Record Contact;

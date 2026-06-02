@@ -548,6 +548,66 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Seminar Manager Role Center - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2143111931 - NamedType 240229828" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Only Planning or Cancelled registrations can be deleted.</source>
+          <target>Tylko rejestracje o statusie Planowane lub Anulowane mogą być usunięte.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType DeleteStatusErr</note>
+        </trans-unit>
+        <trans-unit id="Table 2143111931 - NamedType 430254759" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Changing registration number is not allowed.</source>
+          <target>Zmiana numeru rejestracji jest niedozwolona.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType RenameErr</note>
+        </trans-unit>
+        <trans-unit id="Table 2143111931 - NamedType 2856695092" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Room capacity is lower than maximum seminar participants.</source>
+          <target>Pojemność sali jest mniejsza niż maksymalna liczba uczestników szkolenia.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType RoomCapacityWarnMsg</note>
+        </trans-unit>
+        <trans-unit id="Table 2143111931 - NamedType 3882435575" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seminar with registered lines cannot be modified.</source>
+          <target>Szkolenie z zarejestrowanymi wierszami nie może być modyfikowane.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType SeminarWithRegisteredLinesModifyErr</note>
+        </trans-unit>
+        <trans-unit id="Table 2143111931 - NamedType 720642727" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date can only be changed for Planning status.</source>
+          <target>Data początkowa może być zmieniona tylko dla statusu Planowane.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType StartingDateStatusErr</note>
+        </trans-unit>
+        <trans-unit id="Table 2143111931 - NamedType 3091254118" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to update seminar price on all unregistered lines?</source>
+          <target>Czy chcesz zaktualizować cenę szkolenia we wszystkich niezarejestrowanych wierszach?</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType UpdateLinesQst</note>
+        </trans-unit>
+        <trans-unit id="Table 2235904756 - NamedType 4122121529" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Customer No. can only be changed for unregistered lines.</source>
+          <target>Nr odbiorcy faktury może być zmieniony tylko dla niezarejestrowanych wierszy.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Line - NamedType ChangeCustomerErr</note>
+        </trans-unit>
+        <trans-unit id="Table 2235904756 - NamedType 2922829552" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registered lines cannot be deleted.</source>
+          <target>Zarejestrowane wiersze nie mogą być usunięte.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Line - NamedType DeleteRegisteredErr</note>
+        </trans-unit>
+        <trans-unit id="Table 4239863583 - Field 4287340734 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Worker,Subcontractor</source>
+          <target>Pracownik,Podwykonawca</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Instructor - Field Worker/Subcontractor - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 2143111931 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Planning,Registration,Finished,Cancelled</source>
+          <target>Planowane,Rejestracja,Zakończone,Anulowane</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - Field Status - Property OptionCaption</note>
+        </trans-unit>
       </group>
     </body>
   </file>
