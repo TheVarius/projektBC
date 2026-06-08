@@ -1,4 +1,3 @@
-// Codeunit realizujący procesy zarządzania szkoleniami (Seminar Management), m.in. fakturowanie.
 codeunit 50010 "Seminar Management"
 {
     trigger OnRun()
@@ -39,7 +38,6 @@ codeunit 50010 "Seminar Management"
         if SeminarRegLine.FindSet() then begin
             LineCreated := true;
             repeat
-                // CreateSalesInvoiceHeader - Tworzenie nagłówka faktury sprzedaży
                 Clear(SalesHeader);
                 SalesHeader.Reset();
                 
@@ -51,7 +49,6 @@ codeunit 50010 "Seminar Management"
                 
                 SalesHeader.SetRange("External Document No.", PSeminarRegHeader."No.");
 
-                // If not FindFirst zaczyna od pobrania rekordu. Jeśli go nie ma to wykonuje się to co w IF, a jeśli jest to już mamy w tej zmiennej nagłówek faktury i możemy do niej dopisywać następne wiersze (poza IF'em do którego nie wchodzimy).
                 if not SalesHeader.FindFirst() then begin
                     SalesHeader.Init();
                     
@@ -70,7 +67,6 @@ codeunit 50010 "Seminar Management"
                     SalesHeader.Insert(true);
                 end;
 
-                // CreateSalesInvoiceLines - Tworzenie wierszy faktury
                 Clear(SalesLine);
                 SalesLine.SetRange("Document Type", SalesLine."Document Type"::Invoice);
                 SalesLine.SetRange("Document No.", SalesHeader."No.");
