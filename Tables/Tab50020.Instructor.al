@@ -21,7 +21,14 @@ table 50020 Instructor
             OptionCaption = 'Worker,Subcontractor';
 
             trigger OnValidate()
+            var
+                ConfirmWorkSubChange: Label 'Czy na pewno chcesz zmienić typ pracownika?';
             begin
+                if not Confirm(ConfirmWorkSubChange, false) then begin
+                    "Worker/Subcontractor" := xRec."Worker/Subcontractor";
+                    exit;
+                end;
+
                 if "Worker/Subcontractor" <> xRec."Worker/Subcontractor" then begin
                     Name := '';
                     "Resource No." := '';
@@ -36,11 +43,19 @@ table 50020 Instructor
             TableRelation = Resource where(Type = const(Person));
 
             trigger OnValidate()
+
             var
                 Resource: Record Resource;
+                ConfirmWorkSubChange: Label 'Czy chcesz zmienić typ pracownika? Może spowodować utratę danych';
             begin
-                if "Worker/Subcontractor" <> "Worker/Subcontractor"::Worker then
-                    exit;
+                if "Worker/Subcontractor" <> "Worker/Subcontractor"::Worker then begin
+                    if not Confirm(ConfirmWorkSubChange, false) then begin
+                        "Resource No." := '';
+                        exit;
+                    end;
+                    "Worker/Subcontractor" := "Worker/Subcontractor"::Worker;
+                    "Vendor No." := '';
+                end;
 
                 if Resource.Get("Resource No.") then
                     Name := Resource.Name
@@ -57,9 +72,16 @@ table 50020 Instructor
             trigger OnValidate()
             var
                 Vendor: Record Vendor;
+                ConfirmWorkSubChange: Label 'Czy chcesz zmienić typ pracownika? Może spowodować utratę danych';
             begin
-                if "Worker/Subcontractor" <> "Worker/Subcontractor"::Subcontractor then
-                    exit;
+                if "Worker/Subcontractor" <> "Worker/Subcontractor"::Subcontractor then begin
+                    if not Confirm(ConfirmWorkSubChange, false) then begin
+                        "Vendor No." := '';
+                        exit;
+                    end;
+                    "Worker/Subcontractor" := "Worker/Subcontractor"::Subcontractor;
+                    "Resource No." := '';
+                end;
 
                 if Vendor.Get("Vendor No.") then
                     Name := Vendor.Name
