@@ -174,6 +174,14 @@ table 50050 "Seminar Registration Line"
 
             Editable = false;
         }
+
+        field(50000; "Customer Name"; Text[100])
+        {
+            Caption = 'Customer Name';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Customer.Name where("No." = field("Bill-to Customer No.")));
+            Editable = false;
+        }
     }
 
     keys
