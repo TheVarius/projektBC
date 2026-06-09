@@ -43,11 +43,11 @@ table 50030 "Seminar Room"
                     City := PostCodeRec.City;
 
                 PostCode.ValidatePostCode(
-                    City,                  // Miasto
-                    "Post Code",           // Kod Pocztowy
-                    DummyCounty,           // Pusta zmienna regionu/powiatu
-                    "Country/Region Code", // Kod kraju 
-                    (CurrFieldNo <> 0) and GuiAllowed()); // Flaga wskazująca, czy to interaktywny błąd UI, czy modyfikacja backendowa
+                    City,
+                    "Post Code",
+                    DummyCounty,
+                    "Country/Region Code",
+                    (CurrFieldNo <> 0) and GuiAllowed());
             end;
         }
 
