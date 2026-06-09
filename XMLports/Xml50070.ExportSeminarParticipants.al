@@ -13,7 +13,6 @@ xmlport 50070 "Export Seminar Participants"
             {
                 XmlName = 'Seminar';
                 CalcFields = "Instructor Name";
-                RequestFilterFields = "No.", "Seminar Code";
 
                 fieldelement(Registration_No; SeminarRegHeader."No.")
                 {
@@ -49,13 +48,13 @@ xmlport 50070 "Export Seminar Participants"
                     LinkTable = SeminarRegHeader;
                     LinkFields = "Seminar Registration No." = field("No.");
                     MinOccurs = Zero;
-                    CalcFields = "Participant Name";
+                    CalcFields = "Participant Name", "Customer Name";
 
                     fieldelement(Customer_No; SeminarRegLine."Bill-to Customer No.")
                     {
                     }
 
-                    textelement(Customer_Name)
+                    fieldelement(Customer_Name; SeminarRegLine."Customer Name")
                     {
                     }
 
@@ -66,16 +65,6 @@ xmlport 50070 "Export Seminar Participants"
                     fieldelement(Participant_Name; SeminarRegLine."Participant Name")
                     {
                     }
-
-                    trigger OnAfterGetRecord()
-                    var
-                        Cust: Record Customer;
-                    begin
-                        if Cust.Get(SeminarRegLine."Bill-to Customer No.") then
-                            Customer_Name := Cust.Name
-                        else
-                            Customer_Name := '';
-                    end;
                 }
             }
         }
