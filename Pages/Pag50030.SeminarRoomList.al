@@ -18,32 +18,26 @@ page 50030 "Seminar Room List"
                 {
                     ApplicationArea = All;
                 }
-                
                 field("Name"; Rec."Name")
                 {
                     ApplicationArea = All;
                 }
-                
                 field("Address"; Rec."Address")
                 {
                     ApplicationArea = All;
                 }
-                
                 field("City"; Rec."City")
                 {
                     ApplicationArea = All;
                 }
-                
                 field("Post Code"; Rec."Post Code")
                 {
                     ApplicationArea = All;
                 }
-                
                 field("Country/Region Code"; Rec."Country/Region Code")
                 {
                     ApplicationArea = All;
                 }
-                
                 field("Phone No."; Rec."Phone No.")
                 {
                     ApplicationArea = All;
