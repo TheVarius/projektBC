@@ -1,70 +1,73 @@
-page 50051 "Seminar Registration Subpage"
+table 50010 Seminar
 {
-    PageType = ListPart;
-    Caption = 'Lines';
-    SourceTable = "Seminar Registration Line";
-    DelayedInsert = true;
-    AutoSplitKey = true;
+    Caption = 'Seminar';
 
-    layout
+    fields
     {
-        area(Content)
+        field(1; "Code"; Code[20])
         {
-            repeater(Group)
-            {
-                field("Bill-to Customer No."; Rec."Bill-to Customer No.")
-                {
-                    ApplicationArea = All;
-                }
-                field("Participant Contact No."; Rec."Participant Contact No.")
-                {
-                    ApplicationArea = All;
-                }
-                field("Participant Name"; Rec."Participant Name")
-                {
-                    ApplicationArea = All;
-                }
-                field("Register Date"; Rec."Register Date")
-                {
-                    ApplicationArea = All;
-                }
-                field("Confirmation Date"; Rec."Confirmation Date")
-                {
-                    ApplicationArea = All;
-                }
-                field("Seminar Price"; Rec."Seminar Price")
-                {
-                    ApplicationArea = All;
-                }
-                field("Line Discount %"; Rec."Line Discount %")
-                {
-                    ApplicationArea = All;
-                }
-                field("Line Discount Amount"; Rec."Line Discount Amount")
-                {
-                    ApplicationArea = All;
-                }
-                field("Amount"; Rec."Amount")
-                {
-                    ApplicationArea = All;
-                }
-                field("To Invoice"; Rec."To Invoice")
-                {
-                    ApplicationArea = All;
-                }
-                field("Registered"; Rec."Registered")
-                {
-                    ApplicationArea = All;
-                }
-                field("Participated"; Rec."Participated")
-                {
-                    ApplicationArea = All;
-                }
-                field("Invoice No."; Rec."Invoice No.")
-                {
-                    ApplicationArea = All;
-                }
-            }
+            Caption = 'Code';
+        }
+
+        field(2; Name; Text[50])
+        {
+            Caption = 'Name';
+
+            trigger OnValidate()
+            begin
+                if "Search Name" <> UpperCase(Name) then
+                    "Search Name" := UpperCase(Name);
+            end;
+        }
+
+        field(3; "Seminar Duration"; Decimal)
+        {
+            Caption = 'Seminar Duration';
+            DecimalPlaces = 0 : 1;
+        }
+
+        field(4; "Minimum Participants"; Integer)
+        {
+            Caption = 'Minimum Participants';
+        }
+
+        field(5; "Maximum Participants"; Integer)
+        {
+            Caption = 'Maximum Participants';
+        }
+
+        field(6; "Search Name"; Code[50])
+        {
+            Caption = 'Search Name';
+        }
+
+        field(7; Blocked; Boolean)
+        {
+            Caption = 'Blocked';
+        }
+
+        field(8; "Last Date Modified"; Date)
+        {
+            Caption = 'Last Date Modified';
+            Editable = false;
+        }
+
+        field(9; "Seminar Price"; Decimal)
+        {
+            Caption = 'Seminar Price';
         }
     }
+
+    keys
+    {
+        key(PK; "Code")
+        {
+            Clustered = true;
+        }
+    }
+
+    trigger OnModify()
+    begin
+        "Last Date Modified" := WorkDate();
+    end;
 }
