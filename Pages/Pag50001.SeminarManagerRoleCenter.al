@@ -43,11 +43,9 @@ page 50001 "Seminar Manager Role Center"
                     ApplicationArea = All;
                 }
             }
-            
             group(Tasks)
             {
                 Caption = 'Tasks';
-                
                 action(ExportParticipants)
                 {
                     Caption = 'Eksport uczestników szkolenia';
@@ -58,7 +56,6 @@ page 50001 "Seminar Manager Role Center"
         }
     }
 }
-
 profile "Seminar Manager"
 {
     Caption = 'Seminar Manager';
