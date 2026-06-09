@@ -7,7 +7,6 @@ pageextension 50000 "Sales Setup Extension" extends "Sales & Receivables Setup"
             group("Seminar Management")
             {
                 Caption = 'Seminar Management';
-                
                 field("G/L Account No."; Rec."G/L Account No.")
                 {
                     ApplicationArea = All;
