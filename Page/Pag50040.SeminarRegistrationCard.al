@@ -138,6 +138,7 @@ page 50040 "Seminar Registration Card"
                 Caption = 'Utwórz fakturę sprzedaży';
                 Image = CreateDocument;
                 Promoted = true;
+                PromotedOnly = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 ApplicationArea = All;

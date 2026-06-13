@@ -7,10 +7,12 @@ xmlport 50070 "Export Seminar Participants"
 
     schema
     {
+        //glowny tag
         textelement(Seminar_Registration_Participant_List)
         {
             tableelement(SeminarRegHeader; "Seminar Registration Header")
             {
+                //tag seminar
                 XmlName = 'Seminar';
                 CalcFields = "Instructor Name";
 
@@ -44,7 +46,9 @@ xmlport 50070 "Export Seminar Participants"
 
                 tableelement(SeminarRegLine; "Seminar Registration Line")
                 {
+                    //tag participant
                     XmlName = 'Participant';
+                    /* zeby nie wzielo z innych seminarow */
                     LinkTable = SeminarRegHeader;
                     LinkFields = "Seminar Registration No." = field("No.");
                     MinOccurs = Zero;

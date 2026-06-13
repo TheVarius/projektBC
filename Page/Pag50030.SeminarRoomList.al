@@ -1,11 +1,12 @@
-page 50020 "Instructor List"
+page 50030 "Seminar Room List"
 {
     PageType = List;
-    Caption = 'Instructors';
-    SourceTable = Instructor;
+    Caption = 'Seminar Rooms';
+    SourceTable = "Seminar Room";
     UsageCategory = Lists;
     ApplicationArea = All;
-
+    Editable = false;
+    CardPageId = "Seminar Room Card";
 
     layout
     {
@@ -21,15 +22,23 @@ page 50020 "Instructor List"
                 {
                     ApplicationArea = All;
                 }
-                field("Worker/Subcontractor"; Rec."Worker/Subcontractor")
+                field("Address"; Rec."Address")
                 {
                     ApplicationArea = All;
                 }
-                field("Resource No."; Rec."Resource No.")
+                field("City"; Rec."City")
                 {
                     ApplicationArea = All;
                 }
-                field("Vendor No."; Rec."Vendor No.")
+                field("Post Code"; Rec."Post Code")
+                {
+                    ApplicationArea = All;
+                }
+                field("Country/Region Code"; Rec."Country/Region Code")
+                {
+                    ApplicationArea = All;
+                }
+                field("Phone No."; Rec."Phone No.")
                 {
                     ApplicationArea = All;
                 }

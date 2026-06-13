@@ -1,19 +1,16 @@
-page 50030 "Seminar Room List"
+page 50031 "Seminar Room Card"
 {
-    PageType = List;
-    Caption = 'Seminar Rooms';
+    PageType = Card;
+    Caption = 'Seminar Room Card';
     SourceTable = "Seminar Room";
-    UsageCategory = Lists;
-    ApplicationArea = All;
-    Editable = false;
-    CardPageId = "Seminar Room Card";
 
     layout
     {
         area(Content)
         {
-            repeater(Group)
+            group(General)
             {
+                Caption = 'General';
                 field("Code"; Rec."Code")
                 {
                     ApplicationArea = All;
@@ -26,7 +23,8 @@ page 50030 "Seminar Room List"
                 {
                     ApplicationArea = All;
                 }
-                field("City"; Rec."City")
+
+                field("Address 2"; Rec."Address 2")
                 {
                     ApplicationArea = All;
                 }
@@ -34,11 +32,31 @@ page 50030 "Seminar Room List"
                 {
                     ApplicationArea = All;
                 }
+                field("City"; Rec."City")
+                {
+                    ApplicationArea = All;
+                }
                 field("Country/Region Code"; Rec."Country/Region Code")
                 {
                     ApplicationArea = All;
                 }
+                field("Maximum Participants"; Rec."Maximum Participants")
+                {
+                    ApplicationArea = All;
+                }
+                field("Internal/External"; Rec."Internal/External")
+                {
+                    ApplicationArea = All;
+                }
+            }
+            group(Communication)
+            {
+                Caption = 'Communication';
                 field("Phone No."; Rec."Phone No.")
+                {
+                    ApplicationArea = All;
+                }
+                field("Fax No."; Rec."Fax No.")
                 {
                     ApplicationArea = All;
                 }

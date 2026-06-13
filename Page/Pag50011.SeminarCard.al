@@ -1,8 +1,9 @@
-page 50031 "Seminar Room Card"
+page 50011 "Seminar Card"
 {
     PageType = Card;
-    Caption = 'Seminar Room Card';
-    SourceTable = "Seminar Room";
+    Caption = 'Seminar Card';
+    SourceTable = Seminar;
+    DataCaptionFields = "Code", "Name";
 
     layout
     {
@@ -19,24 +20,19 @@ page 50031 "Seminar Room Card"
                 {
                     ApplicationArea = All;
                 }
-                field("Address"; Rec."Address")
+                field("Search Name"; Rec."Search Name")
                 {
                     ApplicationArea = All;
                 }
-
-                field("Address 2"; Rec."Address 2")
+                field("Seminar Duration"; Rec."Seminar Duration")
                 {
                     ApplicationArea = All;
                 }
-                field("Post Code"; Rec."Post Code")
+                field("Seminar Price"; Rec."Seminar Price")
                 {
                     ApplicationArea = All;
                 }
-                field("City"; Rec."City")
-                {
-                    ApplicationArea = All;
-                }
-                field("Country/Region Code"; Rec."Country/Region Code")
+                field("Minimum Participants"; Rec."Minimum Participants")
                 {
                     ApplicationArea = All;
                 }
@@ -44,19 +40,11 @@ page 50031 "Seminar Room Card"
                 {
                     ApplicationArea = All;
                 }
-                field("Internal/External"; Rec."Internal/External")
+                field("Blocked"; Rec."Blocked")
                 {
                     ApplicationArea = All;
                 }
-            }
-            group(Communication)
-            {
-                Caption = 'Communication';
-                field("Phone No."; Rec."Phone No.")
-                {
-                    ApplicationArea = All;
-                }
-                field("Fax No."; Rec."Fax No.")
+                field("Last Date Modified"; Rec."Last Date Modified")
                 {
                     ApplicationArea = All;
                 }

@@ -34,6 +34,10 @@ page 50042 "Seminar Registration List"
                 {
                     ApplicationArea = All;
                 }
+                field("Instructor Code"; Rec."Instructor Code")
+                {
+                    ApplicationArea = All;
+                }
                 field("Status"; Rec."Status")
                 {
                     ApplicationArea = All;

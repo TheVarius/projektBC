@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="en-US" original="projekt">
     <body>
@@ -23,10 +23,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Instructor - Field Resource No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4239863583 - Field 3961767479 - Method 2126772001 - NamedType 2085397027" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Czy chcesz zmienić typ pracownika? Może spowodować utratę danych</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Instructor - Field Resource No. - Method OnValidate - NamedType ConfirmWorkSubChange</note>
+        </trans-unit>
         <trans-unit id="Table 4239863583 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Instructor - Field Vendor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4239863583 - Field 1527594213 - Method 2126772001 - NamedType 2085397027" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Czy chcesz zmienić typ pracownika? Może spowodować utratę danych</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Instructor - Field Vendor No. - Method OnValidate - NamedType ConfirmWorkSubChange</note>
         </trans-unit>
         <trans-unit id="Table 4239863583 - Field 4287340734 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Worker/Subcontractor</source>
@@ -37,6 +47,11 @@
           <source>Worker,Subcontractor</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Instructor - Field Worker/Subcontractor - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 4239863583 - Field 4287340734 - Method 2126772001 - NamedType 2085397027" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Czy na pewno chcesz zmienić typ pracownika?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Instructor - Field Worker/Subcontractor - Method OnValidate - NamedType ConfirmWorkSubChange</note>
         </trans-unit>
         <trans-unit id="Table 3718962993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Seminar</source>
@@ -94,32 +109,32 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2143111931 - NamedType 240229828" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Only Planning or Cancelled registrations can be deleted.</source>
+          <source>Można usunąć tylko rejestracje o statusie Planowanie lub Anulowano.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType DeleteStatusErr</note>
         </trans-unit>
         <trans-unit id="Table 2143111931 - NamedType 430254759" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Changing registration number is not allowed.</source>
+          <source>Zmiana numeru rejestracji jest niedozwolona.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType RenameErr</note>
         </trans-unit>
         <trans-unit id="Table 2143111931 - NamedType 2856695092" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Room capacity is lower than maximum seminar participants.</source>
+          <source>Pojemność sali jest mniejsza niż maksymalna liczba uczestników seminarium.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType RoomCapacityWarnMsg</note>
         </trans-unit>
         <trans-unit id="Table 2143111931 - NamedType 3882435575" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Seminar with registered lines cannot be modified.</source>
+          <source>Nie można modyfikować seminarium z zarejestrowanymi wierszami.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType SeminarWithRegisteredLinesModifyErr</note>
         </trans-unit>
         <trans-unit id="Table 2143111931 - NamedType 720642727" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Starting Date can only be changed for Planning status.</source>
+          <source>Data rozpoczęcia może być zmieniona tylko dla statusu Planowanie.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType StartingDateStatusErr</note>
         </trans-unit>
         <trans-unit id="Table 2143111931 - NamedType 3091254118" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Do you want to update seminar price on all unregistered lines?</source>
+          <source>Czy chcesz zaktualizować cenę seminarium we wszystkich niezarejestrowanych wierszach?</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Header - NamedType UpdateLinesQst</note>
         </trans-unit>
@@ -234,12 +249,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Line - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2235904756 - NamedType 4122121529" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bill-to Customer No. can only be changed for unregistered lines.</source>
+          <source>Nr nabywcy można zmienić tylko dla niezarejestrowanych wierszy.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Line - NamedType ChangeCustomerErr</note>
         </trans-unit>
         <trans-unit id="Table 2235904756 - NamedType 2922829552" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Registered lines cannot be deleted.</source>
+          <source>Nie można usunąć zarejestrowanych wierszy.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Line - NamedType DeleteRegisteredErr</note>
         </trans-unit>
@@ -257,6 +272,11 @@
           <source>Confirmation Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Line - Field Confirmation Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2235904756 - Field 1171137197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Registration Line - Field Customer Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2235904756 - Field 166038250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice No.</source>
@@ -388,6 +408,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Seminar Room - Field Post Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1997620480 - NamedType 187372530" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seminar '%1' participant '%2'</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Seminar Management - NamedType DescriptionTemplateTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1997620480 - NamedType 1373183175" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice lines have been created</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Seminar Management - NamedType InvoiceLinesCreatedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1997620480 - NamedType 566395159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice has not been created</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Seminar Management - NamedType InvoiceNotCreatedMsg</note>
+        </trans-unit>
         <trans-unit id="Page 768589737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Instructors</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -438,6 +473,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Seminar Manager Role Center - Action Seminars - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2092602469 - Action 2973329650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tasks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Seminar Manager Role Center - Action Tasks - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2092602469 - Action 2483834764 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Eksport uczestników szkolenia</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Seminar Manager Role Center - Action ExportParticipants - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3081262998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Seminar Registration Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -458,10 +503,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Seminar Registration Card - Control SeminarLines - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3081262998 - Action 3880273359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Utwórz fakturę sprzedaży</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Seminar Registration Card - Action CreateSalesInvoice - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3800278800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Seminar Registrations</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Seminar Registration List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3800278800 - Action 1717716567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export XML</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Seminar Registration List - Action ExportXML - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1755843979 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Lines</source>
@@ -487,6 +542,11 @@
           <source>Seminar Rooms</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Seminar Room List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3919306337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Seminar Participants</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort Export Seminar Participants - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3807521762 - Control 1997620480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
           <source>Seminar Management</source>
